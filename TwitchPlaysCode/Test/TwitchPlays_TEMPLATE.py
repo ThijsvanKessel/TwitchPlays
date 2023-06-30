@@ -1,26 +1,3 @@
-# Written by DougDoug and DDarknut
-
-# Hello! This file contains the main logic to process Twitch chat and convert it to game commands.
-# The code is written in Python 3.X
-# There are 2 other files needed to run this code:
-    # TwitchPlays_KeyCodes.py contains the key codes and functions to press keys in-game. You should not modify this file.
-    # TwitchPlays_Connection.py is the code that actually connects to Twitch. You should not modify this file.
-
-# The source code primarily comes from:
-    # Wituz's "Twitch Plays" tutorial: http://www.wituz.com/make-your-own-twitch-plays-stream.html
-    # PythonProgramming's "Python Plays GTA V" tutorial: https://pythonprogramming.net/direct-input-game-python-plays-gta-v/
-    # DDarknut's message queue and updates to the Twitch networking code
-
-# Disclaimer: 
-    # This code is NOT intended to be professionally optimized or organized.
-    # We created a simple version that works well for livestreaming, and I'm sharing it for educational purposes.
-
-##########################################################
-
-TWITCH_CHANNEL = 'darkmyths' # Replace this with your Twitch username. Must be all lowercase.
-
-##########################################################
-
 import keyboard
 import TwitchPlays_Connection
 import pydirectinput
@@ -30,7 +7,7 @@ import concurrent.futures
 from TwitchPlays_KeyCodes import *
 
 ##########################################################
-
+TWITCH_CHANNEL = 'empty' # Replace this with your Twitch username. Must be all lowercase.
 # MESSAGE_RATE controls how fast we process incoming Twitch Chat messages. It's the number of seconds it will take to handle all messages in the queue.
 # This is used because Twitch delivers messages in "batches", rather than one at a time. So we process the messages over MESSAGE_RATE duration, rather than processing the entire batch at once.
 # A smaller number means we go through the message queue faster, but we will run out of messages faster and activity might "stagnate" while waiting for a new batch. 

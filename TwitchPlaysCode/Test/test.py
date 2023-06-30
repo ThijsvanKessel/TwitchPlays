@@ -1,10 +1,6 @@
-# from cgitb import grey
-# from turtle import color
-# from matplotlib import animation
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.animation import FuncAnimation
-import os
 from random import randint, random
 
 fig = plt.figure(figsize=(8,6))
@@ -62,7 +58,5 @@ def animate(i):
 if input1 == "start":
     ani = FuncAnimation(fig, animate, interval=1000, repeat=True)
     input1 == "empty"
-
-
 
 plt.show()
